@@ -1,9 +1,9 @@
-Payfast payment integration
+Lucid Invoices
 =======================
 
 Introduction
 ------------
-This is an oxid module to integrate the payfast solution as payment method
+An extension to custom invoice headers, company description and vat display for each shop.
 
 
 Installation
@@ -11,11 +11,14 @@ Installation
 Upload application files
 
 
-Create the payment method
+Enable Lucid Invoice module
 ----------------------------
 
-Create a payment method named 'Payfast' and configure as you like.
 
-Change API vars
+Edit
 ----------------------------
-The module settings will allow you to add your own API vars
+Add the following lines to
+admin/view/template/sale/order_invoice.tpl
+
+replace line 13
+ <?php echo ${'lucid_invoice_logo_'.$store_id}; ?>
