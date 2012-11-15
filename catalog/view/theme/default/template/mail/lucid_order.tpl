@@ -12,6 +12,11 @@
      <img src="<?php echo $store_url; ?>/image/<?php echo ${'lucid_invoice_logo_'.$store_id}; ?>" />
     
     </a>
+     <p style="margin-top: 0px; margin-bottom: 20px;">
+     <?php if(${'lucid_invoice_details_'.$store_id}){ ?>
+     <?php echo nl2br(${'lucid_invoice_details_'.$store_id}); ?>
+     <?php } ?>
+     </p>
   <p style="margin-top: 0px; margin-bottom: 20px;"><?php echo $text_greeting; ?></p>
   <?php if ($customer_id) { ?>
   <p style="margin-top: 0px; margin-bottom: 20px;"><?php echo $text_link; ?></p>
@@ -31,7 +36,7 @@
       <tr>
         <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: left; padding: 7px;"><b><?php echo $text_order_id; ?></b> <?php echo $order_id; ?><br />
           <b><?php echo $text_date_added; ?></b> <?php echo $date_added; ?><br />
-          <b><?php echo $text_payment_method; ?></b> <?php echo $payment_method; ?><br />
+          <b><?php echo $text_payment_method; ?></b> <?php echo $payment_method; ?> <br />
           <?php if ($shipping_method) { ?>
           <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
           <?php } ?></td>
@@ -120,8 +125,13 @@
       <?php } ?>
     </tfoot>
   </table>
-  <p style="margin-top: 0px; margin-bottom: 20px;"><?php echo $text_footer; ?></p>
-  <p style="margin-top: 0px; margin-bottom: 20px;"><?php echo $text_powered; ?></p>
+  <p style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF;text-align: left; padding: 7px; color: #222222;">
+    Thank you for purchasing at Global Creative<br>
+Global Creative<br>
+Frans Cronje's Online Store<br><br>
+Frans Cronjé.com is an online store that provides inspiring Christian movies and books that are affordable to ensure the world has the opportunity to see them and above all be inspired.
+  </p>
+  <p style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; text-align: left; padding: 7px; color: #222222;"><strong>Choice of Law</strong><br><br><?php echo ${'lucid_invoice_footer_'.$store_id}; ?></p>
 </div>
 </body>
 </html>

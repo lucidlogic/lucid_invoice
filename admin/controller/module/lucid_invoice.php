@@ -25,6 +25,7 @@ class ControllerModuleLucidInvoice extends Controller {
 		$this->data['invoice_logo'] = $this->language->get('invoice_logo');
 		$this->data['invoice_details'] = $this->language->get('invoice_details');
                 $this->data['invoice_vat'] = $this->language->get('invoice_vat');
+                $this->data['invoice_footer'] = $this->language->get('invoice_footer');
 
 		$this->data['button_save'] = $this->language->get('button_save');
 		$this->data['button_cancel'] = $this->language->get('button_cancel');
@@ -90,6 +91,12 @@ class ControllerModuleLucidInvoice extends Controller {
                     } else {
                             $this->data['lucid_invoice_vat_'.$store['store_id']] = $this->config->get('lucid_invoice_vat_'.$store['store_id']);
                     }
+                    
+                    if (isset($this->request->post['lucid_invoice_footer_'.$store['store_id']])) {
+                            $this->data['lucid_invoice_footer_'.$store['store_id']] = $this->request->post['lucid_invoice_footer_'.$store['store_id']];
+                    } else {
+                            $this->data['lucid_invoice_footer_'.$store['store_id']] = $this->config->get('lucid_invoice_footer_'.$store['store_id']);
+                    }
                 }
                 
                 if (isset($this->request->post['lucid_invoice_logo_0'])) {
@@ -108,6 +115,12 @@ class ControllerModuleLucidInvoice extends Controller {
                             $this->data['lucid_invoice_vat_0'] = $this->request->post['lucid_invoice_vat_0'];
                     } else {
                             $this->data['lucid_invoice_vat_0'] = $this->config->get('lucid_invoice_vat_0');
+                    }
+                    
+                     if (isset($this->request->post['lucid_invoice_footer_0'])) {
+                            $this->data['lucid_invoice_footer_0'] = $this->request->post['lucid_invoice_footer_0'];
+                    } else {
+                            $this->data['lucid_invoice_footer_0'] = $this->config->get('lucid_invoice_footer_0');
                     }
 
 		$this->template = 'module/lucid_invoice.tpl';
