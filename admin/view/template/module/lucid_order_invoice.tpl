@@ -10,7 +10,7 @@
 <body>
 <?php foreach ($orders as $order) { ?>
 <div style="page-break-after: always;">
- <img src="/shop/image/<?php echo ${'lucid_invoice_logo_'.$store_id}; ?>" />
+ <img src="../image/<?php echo ${'lucid_invoice_logo_'.$store_id}; ?>" />
   <h1><?php echo $text_invoice; ?></h1>
   <table class="store">
     <tr>

@@ -26,7 +26,7 @@
       <table class="form">
         <tr>
           <td><?php echo $invoice_logo; ?></td>
-          <td><div class="image_<?php echo $store_id?>"><img src="/shop/image/<?php $var = 'lucid_invoice_logo_'.$store_id; echo $$var; ?>"  id="thumb-logo_<?php echo $store_id?>" />
+          <td><div class="image_<?php echo $store_id?>"><img src="../image/<?php $var = 'lucid_invoice_logo_'.$store_id; echo $$var; ?>"  id="thumb-logo_<?php echo $store_id?>" />
              <input type="hidden" name="lucid_invoice_logo_<?php echo $store_id?>" value="<?php $var = 'lucid_invoice_logo_'.$store_id; echo $$var; ?>" id="logo_<?php echo $store_id?>" />
                   <br />
                   <a onclick="image_upload('logo_<?php echo $store_id?>', 'thumb-logo_<?php echo $store_id?>');"><?php echo $text_browse; ?></a>
