@@ -125,12 +125,7 @@
       <?php } ?>
     </tfoot>
   </table>
-  <p style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF;text-align: left; padding: 7px; color: #222222;">
-    Thank you for purchasing at Global Creative<br>
-Global Creative<br>
-Frans Cronje's Online Store<br><br>
-Frans Cronjé.com is an online store that provides inspiring Christian movies and books that are affordable to ensure the world has the opportunity to see them and above all be inspired.
-  </p>
+ 
   <p style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; text-align: left; padding: 7px; color: #222222;"><strong>Choice of Law</strong><br><br><?php echo ${'lucid_invoice_footer_'.$store_id}; ?></p>
 </div>
 </body>
